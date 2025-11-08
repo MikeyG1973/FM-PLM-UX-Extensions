@@ -17,6 +17,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Debug: show working directory and files
+        run: |
+          echo "PWD: $(pwd)"
+          echo "Contents of workspace:" 
+          ls -la
+          echo "--- package.json ---"
+          cat package.json || true
+        shell: bash
+        # allow this diagnostic step to fail without stopping the job
+        continue-on-error: true
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
