@@ -4,3 +4,24 @@
 /.env
 /.env.local
 /.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+/coverage/
+
+# Misc
+.cache/
+.parcel-cache/
+.expo/
+.history/
+
