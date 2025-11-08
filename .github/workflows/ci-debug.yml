@@ -11,11 +11,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Debug: pwd
+      - name: "Debug: pwd"
         run: pwd
 
-      - name: Debug: list root
+      - name: "Debug: list root"
         run: ls -la
 
-      - name: Debug: cat package.json
+      - name: "Debug: cat package.json"
         run: cat package.json || echo "package.json not present"
